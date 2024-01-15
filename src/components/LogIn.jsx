@@ -90,7 +90,7 @@ const LogIn = ({ loginState, setLoginState, setIsLogIn }) => {
                         LogIn
                     </Button>
                 </Modal.Footer>
-            </Modal>
+            </Modal >
         </>
     );
 }
