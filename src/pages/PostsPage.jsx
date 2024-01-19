@@ -1,10 +1,14 @@
 import PostCard from '../components/PostCard'
 import { Container } from 'react-bootstrap'
+import { Helmet } from 'react-helmet'
 import { useSelector } from 'react-redux'
 const PostsPage = () => {
     const Data = useSelector(state => state.PostsData)
     return (
         <Container className='PostsPage'>
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
             {
                 Data !== undefined && Data.map((e, i) => (
                     <PostCard

@@ -6,9 +6,9 @@ import { useRef } from 'react'
 import Swal from 'sweetalert2'
 import GoBack from '../components/GoBack'
 import PostCard from '../components/PostCard'
+import { Helmet } from 'react-helmet'
 const CommentsPage = () => {
     let data = useSelector(state => state.CommentsData)
-    console.log(data)
     if (data.length === 0 && sessionStorage.getItem("post-comments")) {
         data = JSON.parse(sessionStorage.getItem("post-comments"))
     }
@@ -58,6 +58,9 @@ const CommentsPage = () => {
     const logInState = useSelector(state => state.LogInState)
     return (
         <Container className="CommentsPage">
+            <Helmet>
+                <title>Comments</title>
+            </Helmet>
             <GoBack />
             {
                 <PostCard
