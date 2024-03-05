@@ -22,7 +22,7 @@ const PostCard = ({ id, userId, userName, userImg, postImage, postDate, postTitl
                 postInfo={postData}
             />
             <Card.Header>
-                <Link to={"/profile"} className='userName' onClick={() => dispatch({ type: "userId", id: userId })}>
+                <Link to={localStorage.getItem("token") ? "/profile" : "/"} className='userName' onClick={() => dispatch({ type: "userId", id: userId })}>
                     <img src={userImg} alt="" />
                     <span>@{userName}</span>
                 </Link>

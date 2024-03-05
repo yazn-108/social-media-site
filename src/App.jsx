@@ -21,7 +21,7 @@ const App = () => {
     })
   }, [pageNum])
   window.addEventListener('scroll', () => {
-    if (window.location.pathname === "/") {
+    if (window.location.pathname === "/social-media-site") {
       window.innerHeight + Math.round(window.scrollY) >= document.body.offsetHeight && setPageNum(pageNum + 1)
     }
   })
@@ -31,7 +31,7 @@ const App = () => {
       <Routes>
         <Route path='*' element={<ErrorPage />} />
         <Route path='/' element={<PostsPage />} />
-        <Route path='/Profile' element={localStorage.getItem("token") ? <ProfilePage /> : <Navigate to={"/"} />} />
+        <Route path='/profile' element={localStorage.getItem("token") ? <ProfilePage /> : <Navigate to={"/"} />} />
         <Route path='/Comments' element={<CommentsPage />} />
       </Routes>
     </BrowserRouter>
