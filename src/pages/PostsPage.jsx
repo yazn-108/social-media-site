@@ -1,6 +1,6 @@
 import PostCard from '../components/PostCard'
 import { Container } from 'react-bootstrap'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async';
 import { useSelector } from 'react-redux'
 const PostsPage = () => {
     const Data = useSelector(state => state.PostsData)

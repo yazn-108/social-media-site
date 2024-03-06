@@ -4,7 +4,7 @@ import Profile from "../components/ProfileComponents/Profile"
 import { useSelector } from "react-redux"
 import { useEffect, useState } from "react"
 import UserPosts from "../components/ProfileComponents/UserPosts"
-import { Helmet } from "react-helmet"
+import { Helmet } from "react-helmet-async"
 const ProfilePage = () => {
     const posts = useSelector(state => state.PostsData)
     let userId = useSelector(state => state.UserId)

@@ -6,7 +6,7 @@ import { useRef } from 'react'
 import Swal from 'sweetalert2'
 import GoBack from '../components/GoBack'
 import PostCard from '../components/PostCard'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 const CommentsPage = () => {
     let data = useSelector(state => state.CommentsData)
     if (data.length === 0 && sessionStorage.getItem("post-comments")) {
